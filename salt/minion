@@ -1,0 +1,19 @@
+
+file_client: local
+
+file_roots:
+  base:
+    - /srv/salt
+
+gitfs_remotes:
+  - https://github.com/saltstack-formulas/php-formula.git
+
+  #Also fails with:
+  #- https://github.com/saltstack-formulas/php-formula.git:
+  #  - base: v1.3.1
+
+fileserver_backend:
+  - roots
+  - gitfs
+
+
